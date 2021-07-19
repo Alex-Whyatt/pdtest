@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Serial no:</strong>
+  <%= @unit.serial_no %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @unit.device_type %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @unit.availability %>
+</p>
+
+
+<%= link_to 'Edit', edit_unit_path(@unit) %> |
+<%= link_to 'Back', units_path %>

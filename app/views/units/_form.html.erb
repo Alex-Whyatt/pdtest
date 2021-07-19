@@ -1,0 +1,32 @@
+<%= form_with(model: unit) do |form| %>
+  <% if unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
+
+      <ul>
+        <% unit.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :serial_no %>
+    <%= form.number_field :serial_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_type %>
+    <%= form.text_field :device_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :availability %>
+    <%= form.check_box :availability %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
